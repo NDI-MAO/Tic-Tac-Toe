@@ -1,0 +1,28 @@
+body{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    outline: 3px solid gainsboro;
+    outline-offset: -3px;
+}
+.gameGrid{
+background-color:gainsboro;
+border: 2px solid rgb(160, 160, 160);
+font-size: 120px;
+font-weight: 350;
+color: white;
+display: flex;
+font-family: 'Montserrat';
+justify-content: center;
+align-content: center;
+flex-wrap: wrap;
+}
