@@ -2,7 +2,8 @@ const gridFace = document.querySelectorAll(".gameGrid");
 //gridFace[2].innerText = "○";
 //gridFace[5].innerText="×";
 
-const gameboard = Array.from(gridFace);
+const gameboard = Array.from(gridFace).map(item =>item.id);
+const playerArray = [];
 
 // Function to handle the click event
 function handleClick(event) {
@@ -14,3 +15,22 @@ function handleClick(event) {
 gridFace.forEach(item => {
   item.addEventListener('click', handleClick);
 });
+
+//trying function to pick a random gridface
+function botChoice(){
+    return gameboard[Math.floor(Math.random()*gameboard.length)];
+}
+
+//reducing array from gameboard
+gameboard = gameboard.reduce((accumulator,currentValue)=>{
+
+    if(currentValue !==""){
+        playerArray.push(currentValue);
+    }else{
+        accumulator.push(currentValue);
+    }
+    return accumulator;
+}, []);
+
+console.log(gameboard);  // Output: [1, 3, 5]
+console.log(playerArray);  // Output: [2, 4]
