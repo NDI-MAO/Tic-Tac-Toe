@@ -16,10 +16,10 @@ body{
 }
 .gameGrid{
 background-color:gainsboro;
-border: 2px solid rgb(160, 160, 160);
+border: 2px solid rgb(178, 202, 212);
 font-size: 120px;
 font-weight: 350;
-color: white;
+color:navy;
 display: flex;
 font-family: 'Montserrat';
 justify-content: center;
