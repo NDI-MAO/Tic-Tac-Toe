@@ -1,6 +1,6 @@
 body{
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    background-color: gainsboro;
+    background-color:grey;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -11,15 +11,15 @@ body{
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
-    outline: 3px solid gainsboro;
+    outline: 3px solid grey;
     outline-offset: -3px;
 }
 .gameGrid{
-background-color:gainsboro;
-border: 2px solid rgb(178, 202, 212);
+background-color:grey;
+border: 2px solid rgb(100, 100, 100);
 font-size: 120px;
-font-weight: 350;
-color:navy;
+font-weight: 400;
+color:yellow;
 display: flex;
 font-family: 'Montserrat';
 justify-content: center;

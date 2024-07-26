@@ -14,8 +14,10 @@ function handleChoice(event){
     currentPlayer = 'player2';
     }else if(currentPlayer==='player2'){
       element.textContent= "×";
+      element.style.color = "white";
       currentPlayer='player1'
-    }newGameboard();
+    }newGameboard();guessWinner();
+    
   }
 }
 
@@ -40,5 +42,28 @@ function newGameboard(){
     },[]);
   console.log('Gameboard:',gameboard);
   console.log('Player 1:',playerArray);
-  console.log('Player 2:',player2Array)
+  console.log('Player 2:',player2Array);
+}
+
+
+let result = [
+  ['1','2','3'],
+  ['1','4','7'],
+  ['1','5','9'],
+  ['2','5','8'],
+  ['3','6','9'],
+  ['3','5','7'],
+  ['4','5','6'],
+  ['7','8','9']
+];
+
+if(result.some(guessWinner));
+function guessWinner(playerArray,player2Array){
+  if(result.includes(playerArray)){
+    console.log("Player 1 wins the game")
+  }else if(result.includes(player2Array)){
+    console.log("Player 2 wins the game")
+  }else if(gameboard.length===0){
+    console.log("Its a tie")
+  }
 }
