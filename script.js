@@ -14,7 +14,7 @@ function handleChoice(event){
     currentPlayer = 'player2';
     }else if(currentPlayer==='player2'){
       element.textContent= "×";
-      element.style.color = "white";
+      element.style.color = "black";
       currentPlayer='player1'
     }newGameboard();guessWinner();
     
@@ -60,11 +60,22 @@ let result = [
 function guessWinner(){
   for(let combination of result){
     if(combination.every( cell=> playerArray.includes(cell))){
-      alert('Player 1 wins the game');
+      alert('Player 1 wins the game');resetGame();
     }if (combination.every(cell => player2Array.includes(cell))){
-      alert('Player 2 is the winner')
-    }else if(gameboard === 0){
-      alert('It\'s a tie!');
+      alert('Player 2 is the winner');resetGame();
+    }else if(gameboard.length === 0){
+      alert('It\'s a tie!');resetGame();
     }
   }
+}
+//function to reset game after a win!
+function resetGame(){
+  gridFace.forEach(item => {
+    item.textContent='';
+    item.style.color = '';
+  });
+  playerArray = [];
+  player2Array = [];
+  gameboard = Array.from(gridFace).map(item =>item.id);
+  currentPlayer ='player1';
 }
