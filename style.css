@@ -1,28 +1,50 @@
 body{
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    background-color:grey;
+    background-color:whitesmoke;
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
     height: 100vh;
+    gap: 70px;
 }
 .container{
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
-    outline: 3px solid grey;
+    outline: 3px solid whitesmoke;
     outline-offset: -3px;
 }
 .gameGrid{
-background-color:grey;
-border: 2px solid rgb(100, 100, 100);
+background-color:whitesmoke;
+border: 2px solid lightgray;
 font-size: 120px;
 font-weight: 400;
-color:yellow;
+color:darkseagreen;
 display: flex;
 font-family: 'Montserrat';
 justify-content: center;
 align-content: center;
 flex-wrap: wrap;
+}
+.reset{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+height: 30px;
+background-color:darkseagreen;
+border: 0;
+border-radius: 8px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 500;
+font-size: large;
+color: white;
+}
+.content{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: larger;
+    
 }
