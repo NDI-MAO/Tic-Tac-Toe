@@ -57,13 +57,14 @@ let result = [
   ['7','8','9']
 ];
 
-if(result.some(guessWinner));
-function guessWinner(playerArray,player2Array){
-  if(result.includes(playerArray)){
-    console.log("Player 1 wins the game")
-  }else if(result.includes(player2Array)){
-    console.log("Player 2 wins the game")
-  }else if(gameboard.length===0){
-    console.log("Its a tie")
+function guessWinner(){
+  for(let combination of result){
+    if(combination.every( cell=> playerArray.includes(cell))){
+      alert('Player 1 wins the game');
+    }if (combination.every(cell => player2Array.includes(cell))){
+      alert('Player 2 is the winner')
+    }else if(gameboard === 0){
+      alert('It\'s a tie!');
+    }
   }
 }
