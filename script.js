@@ -1,4 +1,6 @@
+//Adding DOM element from HTML
 const gridFace = document.querySelectorAll(".gameGrid");
+const container = document.getElementById("container");
 
 let gameboard = Array.from(gridFace).map(item =>item.id);
 let playerArray = [];
@@ -14,11 +16,10 @@ function handleChoice(event){
     currentPlayer = 'player2';
     }else if(currentPlayer==='player2'){
       element.textContent= "×";
-      element.style.color = "black";
+      element.style.color = "darkslategray";
       currentPlayer='player1'
-    }newGameboard();guessWinner();
-    
-  }
+    }newGameboard();
+  } guessWinner();
 }
 
 // Attach click event handler to each grid item
@@ -45,7 +46,6 @@ function newGameboard(){
   console.log('Player 2:',player2Array);
 }
 
-
 let result = [
   ['1','2','3'],
   ['1','4','7'],
@@ -60,19 +60,22 @@ let result = [
 function guessWinner(){
   for(let combination of result){
     if(combination.every( cell=> playerArray.includes(cell))){
-      alert('Player 1 wins the game');resetGame();
-    }if (combination.every(cell => player2Array.includes(cell))){
-      alert('Player 2 is the winner');resetGame();
-    }else if(gameboard.length === 0){
-      alert('It\'s a tie!');resetGame();
+      container.innerHTML = `<span class="winner1">○</span><br><span class="winner2">WINS THE GAME</span>`;return;
+    }else if (combination.every(cell => player2Array.includes(cell))){
+      container.innerHTML = `<span class="winner1">×</span><br><span class="winner2">WINS THE GAME</span>`;return;
     }
   }
+  if(  gameboard.length === 0){
+    container.innerHTML = `<span class="winner1">○×</span><br><span class="winner2">DRAW</span>`;
+}
 }
 //function to reset game after a win!
 function resetGame(){
   gridFace.forEach(item => {
+    location.reload();
     item.textContent='';
     item.style.color = '';
+    container.innerHTML = '';
   });
   playerArray = [];
   player2Array = [];
