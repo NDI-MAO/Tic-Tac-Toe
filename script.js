@@ -71,7 +71,7 @@ function guessWinner(){
   }
   if(  gameboard.length === 0){
     container.innerHTML = `<span class="winner1">○×</span><br><span class="winner2">DRAW</span>`;
-    container.style.color = "red"
+    container.style.color = "maroon"
 }
 }
 //function to reset game after a win!
