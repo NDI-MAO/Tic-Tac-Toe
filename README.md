@@ -1,8 +1,9 @@
 # Tic-Tac-Toe
 
-Tic Tac Toe Game
-
 live preview:https://ndi-mao.github.io/Tic-Tac-Toe/
+
+<img width="377" alt="Game Preview" src="https://github.com/user-attachments/assets/2ee23f9b-5089-4417-a798-522ed1fd34a6">
+
 
 Made the Tic-Tac-Toe game as an assignment from The Odin Project.
 
