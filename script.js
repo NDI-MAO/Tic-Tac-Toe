@@ -62,9 +62,7 @@ function guessWinner(){
     if(combination.every( cell=> playerArray.includes(cell))){
       container.innerHTML = `<span class="winner1">○</span><br><span class="winner2">WINS THE GAME</span>`;return;
     }else if (combination.every(cell => player2Array.includes(cell))){
-      container.innerHTML = `<span class="winner1">×</span><br><span class="winner2">WINS THE GAME</span>`;
-      container.style.color = "darkslategray"
-      return;
+      container.innerHTML = `<span class="winner1">×</span><br><span class="winner2">WINS THE GAME</span>`;return;
     }
   }
   if(  gameboard.length === 0){
