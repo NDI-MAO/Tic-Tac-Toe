@@ -60,14 +60,18 @@ let result = [
 function guessWinner(){
   for(let combination of result){
     if(combination.every( cell=> playerArray.includes(cell))){
-      container.innerHTML = `<span class="winner1">○</span><br><span class="winner2">WINS THE GAME</span>`;return;
+      container.innerHTML = `<span class="winner1">○</span><br><span class="winner2">WINS THE GAME</span>`;
+      container.style.color = "darkseagreen"
+      return;
     }else if (combination.every(cell => player2Array.includes(cell))){
-      container.innerHTML = `<span class="winner1">×</span><br><span class="winner2">WINS THE GAME</span>`;return;
+      container.innerHTML = `<span class="winner1">×</span><br><span class="winner2">WINS THE GAME</span>`;
+      container.style.color = "darkslategray"
+      return;
     }
   }
   if(  gameboard.length === 0){
     container.innerHTML = `<span class="winner1">○×</span><br><span class="winner2">DRAW</span>`;
-    container.style.color = "darkslategray"
+    container.style.color = "maroon"
 }
 }
 //function to reset game after a win!
