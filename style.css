@@ -20,8 +20,8 @@ body{
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px;
-    outline: 3px solid whitesmoke;
-    outline-offset: -3px;
+    outline: 4px solid whitesmoke;
+    outline-offset: -4px;
 }
 .gameGrid{
 background-color:whitesmoke;
